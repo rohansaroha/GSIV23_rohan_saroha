@@ -31,9 +31,12 @@
     "@tanstack/react-query-devtools": "^4.32.6",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "use-dehydrated-state": "^0.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
     "@babel/preset-typescript": "^7.22.5",
     "@jest/globals": "^29.6.2",
     "@remix-run/dev": "^1.19.3",

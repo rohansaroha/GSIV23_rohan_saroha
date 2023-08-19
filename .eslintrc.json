@@ -7,17 +7,17 @@
     "sourceType": "module"
   },
   "rules": {
-    "indent": ["error", 2],
+    "indent": ["error", 3],
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
     "linebreak-style": ["error", "unix"],
-    "comma-dangle": ["error", "always-multiline"],
     "no-unused-vars": "error",
-    "space-before-function-paren": ["error", "always"],
     "max-len": ["error", { "code": 200, "ignoreUrls": true }],
     "no-multi-spaces": "error",
     "consistent-return": "error",
     "no-var": "error",
+    "react/display-name": 0,
+    "react/react-in-jsx-scope": "off",
     "@tanstack/query/exhaustive-deps": "error",
     "@tanstack/query/prefer-query-object-syntax": "error"
   }
