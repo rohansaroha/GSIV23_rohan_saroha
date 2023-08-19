@@ -16,16 +16,18 @@
   },
   "lint-staged": {
     "*.{js,ts}": [
-      "npm run lint", 
-      "npx prettier --write", 
-      "git add" 
+      "npm run lint",
+      "npx prettier --write",
+      "git add"
     ]
-  },  
+  },
   "dependencies": {
     "@remix-run/css-bundle": "^1.19.3",
     "@remix-run/node": "^1.19.3",
     "@remix-run/react": "^1.19.3",
     "@remix-run/serve": "^1.19.3",
+    "@tanstack/react-query": "^4.32.6",
+    "@tanstack/react-query-devtools": "^4.32.6",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -33,6 +35,7 @@
   "devDependencies": {
     "@remix-run/dev": "^1.19.3",
     "@remix-run/eslint-config": "^1.19.3",
+    "@tanstack/eslint-plugin-query": "^4.32.5",
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "eslint": "^8.38.0",
