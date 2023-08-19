@@ -1,23 +1,18 @@
-import type { V2_MetaFunction } from '@remix-run/node';
-import { Home } from '~/Containers/Home';
-import { useQuery } from '@tanstack/react-query';
+import { json } from '@remix-run/node';
+import type { LoaderArgs, V2_MetaFunction } from '@remix-run/node';
+import Home from '../Containers/Home/index';
+import getUpcomingPopularMovies from '~/services/getUpcomingMovies';
+import { useLoaderData } from '@remix-run/react';
 
 export const meta: V2_MetaFunction = () => {
    return [{ title: 'Movies' }, { name: 'Hello', content: 'Welcome to IMDB!' }];
 };
-
+export async function loader({}: LoaderArgs) {
+   const data = await getUpcomingPopularMovies();
+   return json(data);
+}
 export default function Index() {
-   const { isLoading, error, data } = useQuery({
-      queryKey: ['repoData'],
-      queryFn: () =>
-         fetch('https://api.github.com/repos/TanStack/query').then((res) =>
-            res.json()
-         )
-   });
-   console.log('data', data);
-
-   if (isLoading) return 'Loading...';
-
-   if (error) return 'An error has occurred: ' + error.message;
+   const data = useLoaderData();
+   console.log(data);
    return <Home />;
 }

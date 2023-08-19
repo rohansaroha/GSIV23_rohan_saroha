@@ -1,9 +1,13 @@
 import React /* unused */ from 'react';
 
-export const Home = ()=>{
+const Home=()=>{
    return(
       <>
-         <div>Home</div>
+         <h1 className="text-3xl font-bold underline">
+            Hello world!
+         </h1>
       </>
    );
 };
+
+export default Home;

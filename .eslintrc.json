@@ -12,7 +12,7 @@
     "quotes": ["error", "single"],
     "linebreak-style": ["error", "unix"],
     "no-unused-vars": "error",
-    "max-len": ["error", { "code": 200, "ignoreUrls": true }],
+    "max-len": ["error", { "code": 300, "ignoreUrls": true }],
     "no-multi-spaces": "error",
     "consistent-return": "error",
     "no-var": "error",

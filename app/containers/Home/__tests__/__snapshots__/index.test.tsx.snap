@@ -5,15 +5,19 @@ exports[`sum module MyComponent snapshot 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
-        Home
-      </div>
+      <h1
+        class="text-3xl font-bold underline"
+      >
+        Hello world!
+      </h1>
     </div>
   </body>,
   "container": <div>
-    <div>
-      Home
-    </div>
+    <h1
+      class="text-3xl font-bold underline"
+    >
+      Hello world!
+    </h1>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

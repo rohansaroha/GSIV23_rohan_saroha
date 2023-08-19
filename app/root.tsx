@@ -1,4 +1,3 @@
-import { cssBundleHref } from '@remix-run/css-bundle';
 import type { LinksFunction } from '@remix-run/node';
 import {
    Links,
@@ -11,19 +10,18 @@ import {
 import {
    QueryClient,
    QueryClientProvider,
-   Hydrate
 } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { useDehydratedState } from 'use-dehydrated-state';
+import stylesheet from '~/tailwind.css';
 
 const queryClient = new QueryClient();
 
 export const links: LinksFunction = () => [
-   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
+   { rel: 'stylesheet', href: stylesheet },
+
 ];
 
 export default function App () {
-   const dehydratedState = useDehydratedState();
 
    return (
       <html lang="en">
@@ -33,12 +31,10 @@ export default function App () {
             <Meta />
             <Links />
          </head>
-         <body>
+         <body suppressHydrationWarning={true}>
             <QueryClientProvider client={queryClient}>
                <ReactQueryDevtools initialIsOpen={false} />
-               <Hydrate state={dehydratedState}>
-                  <Outlet />
-               </Hydrate>
+               <Outlet />
                <ScrollRestoration />
                <Scripts />
                <LiveReload />
