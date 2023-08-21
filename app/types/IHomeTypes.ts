@@ -3,26 +3,25 @@ export interface IUpcomingMoviesRes {
     ok: boolean;
     status: boolean;
  }
-export interface IUpcomingMoviesData{
-    page: number,
-    results: IMovie[],
-    totalPages: number,
-    status: number,
-    ok:boolean
-}
-
 export interface IMovie{
-    adult: boolean,
-    backdrop_path: string,
-    id: number,
-    original_language: string,
-    original_title: string,
-    overview: string,
-    popularity: number,
-    poster_path: string,
-    release_date: string,
-    title: string,
-    video: boolean,
-    vote_count: number,
-    vote_average:number
+    adult: boolean | null,
+    backdrop_path: string | null,
+    id: number | null,
+    original_language: string | null,
+    original_title: string | null,
+    overview: string | null,
+    popularity: number | null,
+    poster_path: string | null,
+    release_date: string | null,
+    title: string | null,
+    video: boolean | null,
+    vote_count: number | null,
+    vote_average:number | null
+}
+export interface IUpcomingMoviesData{
+    page: number | null,
+    results: IMovie[],
+    totalPages: number | null,
+    status: number | null,
+    ok:boolean | null
 }

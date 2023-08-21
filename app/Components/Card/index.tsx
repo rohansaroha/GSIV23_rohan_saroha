@@ -16,11 +16,10 @@ const Card = ({ movie }: ICardProps) => {
             >
                <img
                   src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
-                  alt=""
+                  alt="poster path"
                   className="absolute inset-0 h-full w-full object-cover object-center transition duration-2ßß group-hover:scale-110"
                />
             </Link>
-
             <div className="flex flex-1 flex-col p-4 sm:p-6">
                <h2 className="mb-2 text-lg font-semibold text-gray-800">
                   <Link
@@ -38,9 +37,9 @@ const Card = ({ movie }: ICardProps) => {
                         fill="currentColor"
                      >
                         <path
-                           fill-rule="evenodd"
+                           fillRule="evenodd"
                            d="M9.595 2.945a1 1 0 011.809 0l1.774 3.585 3.972.576a1 1 0 01.556 1.705l-2.87 2.806.678 3.963a1 1 0 01-1.45 1.055L10 14.59l-3.55 1.874a1 1 0 01-1.45-1.055l.678-3.963-2.87-2.806a1 1 0 01.556-1.705l3.972-.576 1.773-3.586z"
-                           clip-rule="evenodd"
+                           clipRule="evenodd"
                         />
                      </svg>
 
@@ -49,7 +48,6 @@ const Card = ({ movie }: ICardProps) => {
                      </p>
                   </div>
                </h2>
-
                <p className="text-gray-500 line-clamp-3">{movie?.overview}</p>
             </div>
          </div>
