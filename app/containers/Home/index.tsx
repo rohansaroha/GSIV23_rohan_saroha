@@ -3,7 +3,6 @@ import Search from '../../Components/Search';
 import Card from '../../Components/Card';
 import type { IMovie } from '../../types/IHomeTypes';
 import Loader from '~/Components/Loader';
-import { isEmpty } from 'lodash';
 
 interface IHome {
    moviesData: IMovie[];

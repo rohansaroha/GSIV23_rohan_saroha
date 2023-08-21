@@ -1,6 +1,6 @@
 import { json } from '@remix-run/node';
 import type { LoaderArgs, V2_MetaFunction } from '@remix-run/node';
-import Home from '../Containers/Home/index';
+import Home from '../containers/Home';
 import getUpcomingPopularMovies from '~/services/getUpcomingMovies';
 import getMovieList from '~/services/getMovieList';
 import { useLoaderData } from '@remix-run/react';

@@ -1,6 +1,5 @@
 import { json } from '@remix-run/node';
 import type { LoaderArgs, V2_MetaFunction } from '@remix-run/node';
-import Home from '../Containers/Home/index';
 import getUpcomingPopularMovies from '~/services/getUpcomingMovies';
 import { useLoaderData } from '@remix-run/react';
 import type { IUpcomingMoviesRes } from '../types/IHomeTypes';
@@ -19,7 +18,7 @@ export default function Index() {
    console.log(data);
    return (
       <>
-         <Home moviesData={data?.data} />
+         <div>moviee</div>
       </>
    );
 }
