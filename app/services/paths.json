@@ -1,0 +1,4 @@
+{
+    "baseUrl": "https://api.themoviedb.org/3/",
+    "upcomingMovies":"movie/upcoming?language=en-US&page="
+}
