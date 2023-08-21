@@ -18,8 +18,8 @@ export default function Index() {
    const data: IUpcomingMoviesRes = useLoaderData();
    console.log(data);
    return (
-      <div className="bg-slate-800">
+      <>
          <Home moviesData={data?.data} />
-      </div>
+      </>
    );
 }
