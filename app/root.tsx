@@ -5,29 +5,27 @@ import {
    Meta,
    Outlet,
    Scripts,
-   ScrollRestoration,
+   ScrollRestoration
 } from '@remix-run/react';
-import {
-   QueryClient,
-   QueryClientProvider,
-} from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import stylesheet from '~/tailwind.css';
 
 const queryClient = new QueryClient();
 
 export const links: LinksFunction = () => [
-   { rel: 'stylesheet', href: stylesheet },
-
+   { rel: 'stylesheet', href: stylesheet }
 ];
 
-export default function App () {
-
+export default function App() {
    return (
-      <html lang="en">
+      <html lang="en" className="dark">
          <head>
             <meta charSet="utf-8" />
-            <meta name="viewport" content="width=device-width,initial-scale=1" />
+            <meta
+               name="viewport"
+               content="width=device-width,initial-scale=1"
+            />
             <Meta />
             <Links />
          </head>
