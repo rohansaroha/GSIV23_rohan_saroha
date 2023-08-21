@@ -21,6 +21,7 @@ export async function loader({}: LoaderArgs) {
 
 export default function Index() {
    const data: IUpcomingMoviesRes = useLoaderData();
+   const maxPage: number | null = data?.data?.total_pages;
    const [movieData, setMovieData] = useState(data.data.results);
    const [searchValue, setSearchValue] = useState('');
    const [page, setPage] = useState(1);
@@ -46,7 +47,7 @@ export default function Index() {
    });
 
    useEffect(() => {
-      if (page != 1 && isEmpty(searchValue)) {
+      if (page != 1 && isEmpty(searchValue) && maxPage && maxPage > page) {
          upcomingMutate();
       }
    }, [page]);
@@ -57,7 +58,9 @@ export default function Index() {
             window.innerHeight + document.documentElement.scrollTop + 1 >=
             document.documentElement.scrollHeight
          ) {
-            setPage((prev) => prev + 1);
+            if (maxPage && maxPage > page) {
+               setPage((prev) => prev + 1);
+            }
          }
       } catch (error) {
          console.log(error);

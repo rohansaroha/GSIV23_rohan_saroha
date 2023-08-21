@@ -21,7 +21,7 @@ export interface IMovie{
 export interface IUpcomingMoviesData{
     page: number | null,
     results: IMovie[],
-    totalPages: number | null,
+    total_pages: number | null,
     status: number | null,
     ok:boolean | null
 }
