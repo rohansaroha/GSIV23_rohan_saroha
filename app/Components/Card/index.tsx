@@ -12,7 +12,7 @@ const Card = ({ movie }: ICardProps) => {
             <Link
                prefetch="intent"
                className="group relative block h-48 overflow-hidden bg-gray-100 md:h-64"
-               to={`movie/${movie?.id}`}
+               to={`movie/${movie?.title}`}
             >
                <img
                   src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
