@@ -29,12 +29,8 @@ export default function Index() {
    const { isLoading: upcomingLoader, mutate: upcomingMutate } = useMutation({
       mutationFn: () => getUpcomingPopularMovies(page),
       onSuccess: (res) => {
-         let rawData;
-         if (isEmpty(searchValue)) {
-            rawData = res.data.results;
-         } else {
-            rawData = [...movieData, ...res.data.results];
-         }
+         const rawData = [...movieData, ...res.data.results];
+
          setMovieData(rawData);
       }
    });
@@ -74,6 +70,7 @@ export default function Index() {
       if (!isEmpty(movieName)) {
          searchMutate(movieName);
       } else {
+         setMovieData([]);
          upcomingMutate();
       }
    };

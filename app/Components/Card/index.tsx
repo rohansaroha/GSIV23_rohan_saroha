@@ -23,7 +23,7 @@ const Card = ({ movie }: ICardProps) => {
             <div className="flex flex-1 flex-col p-4 sm:p-6">
                <h2 className="mb-2 text-lg font-semibold text-gray-800">
                   <Link
-                     to={`movie/${movie?.id}`}
+                     to={`movie/${movie?.title}`}
                      prefetch="intent"
                      className="transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                   >

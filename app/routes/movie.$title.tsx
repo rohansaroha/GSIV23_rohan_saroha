@@ -4,6 +4,7 @@ import { useLoaderData } from '@remix-run/react';
 import type { IUpcomingMoviesRes } from '../types/IHomeTypes';
 import getMovieList from '~/services/getMovieList';
 import DetailsCard from '../Components/DetailsCard';
+import BackNavigation from '~/Components/BackNavigation/BackNavigation';
 
 export const meta: V2_MetaFunction = () => {
    return [{ title: 'Movies' }, { name: 'Hello', content: 'Welcome to IMDB!' }];
@@ -18,8 +19,11 @@ export async function loader({ params }: LoaderArgs) {
 export default function Index() {
    const data: IUpcomingMoviesRes = useLoaderData();
    return (
-      <div className="bg-slate-800 h-screen justify-center flex">
-         <DetailsCard movie={data.data.results[0]} />
-      </div>
+      <>
+         <BackNavigation title={data.data.results[0].title || ''} />
+         <div className="bg-slate-800 h-screen justify-center flex">
+            <DetailsCard movie={data.data.results[0]} />
+         </div>
+      </>
    );
 }
