@@ -87,7 +87,8 @@ export default function Index() {
          <Home
             moviesData={movieData}
             searchMutate={debouncedHandleOnChange}
-            isLoading={upcomingLoader && searchLoader}
+            searchLoader={searchLoader}
+            upcomingLoader={upcomingLoader}
             searchValue={searchValue}
          />
       </div>

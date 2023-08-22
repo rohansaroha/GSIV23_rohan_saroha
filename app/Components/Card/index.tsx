@@ -8,7 +8,11 @@ interface ICardProps {
 const Card = ({ movie }: ICardProps) => {
    return (
       <>
-         <div className="flex flex-col overflow-hidden rounded-lg  border bg-white">
+         <Link
+            prefetch="intent"
+            to={`movie/${movie?.title}`}
+            className="flex flex-col overflow-hidden rounded-lg  border bg-white"
+         >
             <Link
                prefetch="intent"
                className="group relative block h-48 overflow-hidden bg-gray-100 md:h-64"
@@ -48,9 +52,9 @@ const Card = ({ movie }: ICardProps) => {
                      </p>
                   </div>
                </h2>
-               <p className="text-gray-500 line-clamp-3">{movie?.overview}</p>
+               <p className="text-gray-500 line-clamp-1">{movie?.overview}</p>
             </div>
-         </div>
+         </Link>
       </>
    );
 };

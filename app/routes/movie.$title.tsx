@@ -21,7 +21,7 @@ export default function Index() {
    return (
       <>
          <BackNavigation title={data.data.results[0].title || ''} />
-         <div className="bg-slate-800 h-screen justify-center flex">
+         <div className="bg-slate-800 min-h-screen h-full justify-center flex">
             <DetailsCard movie={data.data.results[0]} />
          </div>
       </>

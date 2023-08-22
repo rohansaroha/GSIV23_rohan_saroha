@@ -1,58 +1,49 @@
-# Welcome to Remix!
+## Getting Started
 
-- [Remix Docs](https://remix.run/docs)
+-  Install dependencies using `yarn install`
 
-## Development
+-  Start the dev server using `yarn dev`
 
-From your terminal:
+-  Build the deployment server using `yarn build`
 
-```sh
-npm run dev
-```
+-  Go through the other scripts in `package.json`
 
-This starts your app in development mode, rebuilding assets on file changes.
+## Network requests using apisauce
 
-## Deployment
+-  API calls using [Api Sauce](https://github.com/infinitered/apisauce/)
 
-First, build your app for production:
+   Take a look at the following files
 
-```sh
-npm run build
-```
+   -  [base util](app/services/apiUtil.ts)
+   -  [movielist](app/services/getMovieList.ts)
 
-Then run the app in production mode:
+## state management using tantackquery
 
-```sh
-npm start
-```
+-  Benefits of using TanStack Query for data fetching
 
-Now you'll need to pick a host to deploy it to.
+   -  Automatic caching and cache management. ...
+      Background data updates. ...
+      Query invalidation and refetching. ...
+      Error and loading state handling. ...
+      Flexibility and extensibility. ...
+      In-memory caching. ...
+      Deduplication. ...
+      Cache invalidation and garbage collection.
 
-### DIY
+# List elements from the challenge that you think you have done well, and that exemplify your proficiency. Please describe why you chose those elements, and how they demonstrate your proficiency.
 
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
+-  Added debouncing in search bar
+   -  Less CPU Usage
+      Reduced Network Traffic
+      Improved Performance
+-  Added api-sauce for network requests
 
-Make sure to deploy the output of `remix build`
+   -  adds standardized errors and request/response transforms to the API response. It also allows you to add monitors that you can use to record values, measure performance of API calls, perform logging, etc.
 
-- `build/`
-- `public/build/`
+-  Added tantack query
 
-### Using a Template
+# List what you would do to improve your solution if you had 4 more hours available for this task. Describe why you would do those things.
 
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over relevant code/assets from your current app to the new project that's pre-configured for your target server.
-
-Most importantly, this means everything in the `app/` directory, but if you've further customized your current application outside of there it may also include:
-
-- Any assets you've added/updated in `public/`
-- Any updated versions of root files such as `.eslintrc.js`, etc.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```
+-  Added more tests and Improved tests coverage
+-  add pipeline for ci and cd
+-  add more eslint rules
