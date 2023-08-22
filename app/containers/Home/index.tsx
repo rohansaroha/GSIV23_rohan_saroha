@@ -7,20 +7,21 @@ import Loader from '~/Components/Loader';
 interface IHome {
    moviesData: IMovie[];
    searchMutate: (name: string) => void;
-   searchLoader?: boolean;
+   searchLoader: boolean;
    upcomingLoader: boolean;
    searchValue: string;
 }
 const Home = ({
    moviesData,
    searchMutate,
+   searchLoader,
    upcomingLoader,
    searchValue
 }: IHome) => {
    return (
       <div>
          <Search searchMutate={searchMutate} />
-         {upcomingLoader ? (
+         {upcomingLoader && moviesData.length == 0 ? (
             <Loader />
          ) : (
             <>
@@ -41,6 +42,7 @@ const Home = ({
                      </div>
                   </div>
                </div>
+               {searchLoader ? <Loader /> : null}
             </>
          )}
       </div>

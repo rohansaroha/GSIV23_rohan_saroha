@@ -83,7 +83,7 @@ export default function Index() {
    }, []);
 
    return (
-      <div className="bg-slate-800 h-auto">
+      <div className="bg-slate-800 min-h-screen h-full">
          <Home
             moviesData={movieData}
             searchMutate={debouncedHandleOnChange}
