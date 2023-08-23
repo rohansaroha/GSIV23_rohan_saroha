@@ -29,21 +29,3 @@
       In-memory caching. ...
       Deduplication. ...
       Cache invalidation and garbage collection.
-
-# List elements from the challenge that you think you have done well, and that exemplify your proficiency. Please describe why you chose those elements, and how they demonstrate your proficiency.
-
--  Added debouncing in search bar
-   -  Less CPU Usage
-      Reduced Network Traffic
-      Improved Performance
--  Added api-sauce for network requests
-
-   -  adds standardized errors and request/response transforms to the API response. It also allows you to add monitors that you can use to record values, measure performance of API calls, perform logging, etc.
-
--  Added tantack query
-
-# List what you would do to improve your solution if you had 4 more hours available for this task. Describe why you would do those things.
-
--  Added more tests and Improved tests coverage
--  add pipeline for ci and cd
--  add more eslint rules
